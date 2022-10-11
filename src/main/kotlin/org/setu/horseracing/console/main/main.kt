@@ -19,10 +19,11 @@ fun main(args: Array<String>){
             1 -> addRace()
             2 -> listRaces()
             3 -> deleteRace()
-            4 -> addHorse()
-            5 -> listHorses()
-            6 -> updateHorse()
-            7 -> deleteHorse()
+            4 -> searchRace()
+            5 -> addHorse()
+            6 -> listHorses()
+            7 -> updateHorse()
+            8 -> deleteHorse()
             -1 -> println("Exiting App")
             else -> println("Invalid Option")
         }
@@ -40,11 +41,12 @@ fun menu() : Int {
     println(" 1. Create Race")
     println(" 2. List Races")
     println(" 3. Delete Race")
+    println(" 4. Search Race")
     println(" ----------------------- ")
-    println(" 4. Add Horse")
-    println(" 5. List Horses")
-    println(" 6. Update Horse")
-    println(" 7. Delete Horse")
+    println(" 5. Add Horse")
+    println(" 6. List Horses")
+    println(" 7. Update Horse")
+    println(" 8. Delete Horse")
     println("-1. Exit")
     println()
     print("Enter an integer : ")
@@ -85,6 +87,32 @@ fun addRace() {
     println("Race: ${tempRace.raceName} has been added")
     tempRace.id = races.size.toLong()
     races.add(tempRace.copy())
+}
+fun searchRace() {
+
+    var searchId = getId()
+    val tempRace = search(searchId)
+
+    if(tempRace != null)
+        println("Race Details [ $tempRace ]")
+    else
+        println("Race Not Found...")
+}
+
+fun search(id: Long) : RaceModel? {
+    var foundRace: RaceModel? = races.find { p -> p.id == id }
+    return foundRace
+}
+fun getId() : Long {
+    var strId : String?
+    var searchId : Long
+    print("Enter id to Search/Update : ")
+    strId = readLine()!!
+    searchId = if (strId.toLongOrNull() != null && !strId.isEmpty())
+        strId.toLong()
+    else
+        -9
+    return searchId
 }
 
 fun listRaces() {
