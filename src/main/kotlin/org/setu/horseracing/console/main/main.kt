@@ -1,8 +1,11 @@
 package org.setu.horseracing.console.main
 
 import mu.KotlinLogging
+import org.setu.horseracing.console.models.RaceModel
 
 private val logger = KotlinLogging.logger {}
+
+val races = ArrayList<RaceModel>()
 
 fun main(args: Array<String>){
     logger.info { "Launching Horse racing App" }
@@ -55,7 +58,33 @@ fun menu() : Int {
 }
 
 fun addRace() {
+    var tempRace = RaceModel()
     println("You Chose To Create a Race")
+
+
+    print("Enter Race Name: ")
+    tempRace.raceName = readLine()!!
+
+    print("Enter Race Date: ")
+    tempRace.raceDate = readLine()!!
+
+    print("Enter Race Size: ")
+    tempRace.raceSize = readLine()!!.toInt()
+
+    print("Enter Race start time: ")
+    tempRace.startTime = readLine()!!
+
+    print("Enter Race Winner: ")
+    tempRace.raceWinner = readLine()!!
+
+    print("Enter Race Venue: ")
+    tempRace.venue = readLine()!!
+
+    println("The ${tempRace.raceName} was held at ${tempRace.venue} on the ${tempRace.raceDate} and the winner was ${tempRace.raceWinner}.")
+
+    println("Race: ${tempRace.raceName} has been added")
+    tempRace.id = races.size.toLong()
+    races.add(tempRace.copy())
 }
 
 fun listRaces() {

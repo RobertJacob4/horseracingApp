@@ -6,8 +6,7 @@ data class RaceModel(var id: Long = 0,
                      var startTime: String = "",
                      var venue: String = "",
                      var raceSize: Int = 0,
-                     var raceWinner: String  = "",
-                     var horsesInRace: Array<String> = arrayOf(",")
+                     var raceWinner: String  = ""
 ){
 
 }
