@@ -89,6 +89,7 @@ fun addRace() {
 
 fun listRaces() {
     println("You Chose To View Races")
+    races.forEach{ logger.info("$it")}
 }
 
 fun deleteRace() {
