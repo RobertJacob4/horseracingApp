@@ -1,4 +1,4 @@
-package org.setu.horseracing
+package org.setu.horseracing.console.main
 
 import mu.KotlinLogging
 
