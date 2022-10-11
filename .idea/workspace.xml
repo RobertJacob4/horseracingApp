@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3693142-440c-4eb4-8d51-7a034bc39ad9" name="Changes" comment="added menu and empty crud functions" />
+    <list default="true" id="a3693142-440c-4eb4-8d51-7a034bc39ad9" name="Changes" comment="refactored package" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665496048672</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactored package">
+      <created>1665497142907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665497142907</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +117,7 @@
     <MESSAGE value="added README.md" />
     <MESSAGE value="added logging" />
     <MESSAGE value="added menu and empty crud functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added menu and empty crud functions" />
+    <MESSAGE value="refactored package" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored package" />
   </component>
 </project>
