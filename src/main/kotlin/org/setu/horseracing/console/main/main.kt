@@ -4,6 +4,6 @@ import org.setu.horseracing.console.controllers.HorseController
 import org.setu.horseracing.console.controllers.RaceController
 
 fun main(args: Array<String>) {
-    //RaceController().start()
-    HorseController().start()
+    RaceController().start()
+    //HorseController().start()
 }

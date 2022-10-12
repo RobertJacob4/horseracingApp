@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3693142-440c-4eb4-8d51-7a034bc39ad9" name="Changes" comment="added HorseStore">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/HorseController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/horse/HorseMemStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/HorseView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="a3693142-440c-4eb4-8d51-7a034bc39ad9" name="Changes" comment="added HorseController, Horse View and HorseMemStore">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/helpers/FileHelpers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/horse/HorseJSONStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/race/RaceJSONStore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/HorseController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/HorseController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/RaceController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/RaceController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/main/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/main/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/RaceMemStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/race/RaceMemStore.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/RaceModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/race/RaceModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/RaceStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/models/race/RaceStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/HorseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/HorseView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/RaceView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/RaceView.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -166,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665586981944</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added HorseController, Horse View and HorseMemStore">
+      <created>1665589999899</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665589999899</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +200,7 @@
     <MESSAGE value="added RaceStore, RaceView, RaceController" />
     <MESSAGE value="added Horse Model" />
     <MESSAGE value="added HorseStore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added HorseStore" />
+    <MESSAGE value="added HorseController, Horse View and HorseMemStore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added HorseController, Horse View and HorseMemStore" />
   </component>
 </project>

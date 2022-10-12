@@ -1,6 +1,7 @@
 package org.setu.horseracing.console.controllers
 
 import mu.KotlinLogging
+import org.setu.horseracing.console.models.horse.HorseJSONStore
 import org.setu.horseracing.console.models.horse.HorseMemStore
 import org.setu.horseracing.console.models.horse.HorseModel
 import org.setu.horseracing.console.views.HorseView
@@ -8,7 +9,8 @@ import org.setu.horseracing.console.views.HorseView
 
 class HorseController {
 
-    val horses = HorseMemStore()
+    //val horses = HorseMemStore()
+    val horses = HorseJSONStore()
     val horseView = HorseView()
     val logger = KotlinLogging.logger {}
 

@@ -1,13 +1,15 @@
 package org.setu.horseracing.console.controllers
 
 import mu.KotlinLogging
+import org.setu.horseracing.console.models.race.RaceJSONStore
 import org.setu.horseracing.console.models.race.RaceMemStore
 import org.setu.horseracing.console.models.race.RaceModel
 import org.setu.horseracing.console.views.RaceView
 
 class RaceController {
 
-    val races = RaceMemStore()
+    //val races = RaceMemStore()
+    val races = RaceJSONStore()
     val raceView = RaceView()
     val logger = KotlinLogging.logger {}
 

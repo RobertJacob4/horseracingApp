@@ -1,7 +1,9 @@
 package org.setu.horseracing.console.views
 
+import org.setu.horseracing.console.models.horse.HorseJSONStore
 import org.setu.horseracing.console.models.horse.HorseMemStore
 import org.setu.horseracing.console.models.horse.HorseModel
+
 
 class HorseView {
 
@@ -26,7 +28,7 @@ class HorseView {
         return option
     }
 
-    fun listHorses(horses : HorseMemStore) {
+    fun listHorses(horses: HorseJSONStore) {
         println("List All Horses")
         println()
         horses.logAll()

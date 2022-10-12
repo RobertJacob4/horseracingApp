@@ -1,5 +1,6 @@
 package org.setu.horseracing.console.views
 
+import org.setu.horseracing.console.models.race.RaceJSONStore
 import org.setu.horseracing.console.models.race.RaceMemStore
 import org.setu.horseracing.console.models.race.RaceModel
 
@@ -26,7 +27,7 @@ class RaceView {
         return option
     }
 
-    fun listRaces(races : RaceMemStore) {
+    fun listRaces(races: RaceJSONStore) {
         println("List All Races")
         println()
         races.logAll()
