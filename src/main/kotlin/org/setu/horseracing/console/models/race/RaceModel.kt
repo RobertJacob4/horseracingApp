@@ -1,4 +1,4 @@
-package org.setu.horseracing.console.models
+package org.setu.horseracing.console.models.race
 
 data class RaceModel(var id: Long = 0,
                      var raceName: String = "",

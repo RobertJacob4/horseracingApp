@@ -1,8 +1,8 @@
 package org.setu.horseracing.console.controllers
 
 import mu.KotlinLogging
-import org.setu.horseracing.console.models.RaceMemStore
-import org.setu.horseracing.console.models.RaceModel
+import org.setu.horseracing.console.models.race.RaceMemStore
+import org.setu.horseracing.console.models.race.RaceModel
 import org.setu.horseracing.console.views.RaceView
 
 class RaceController {
@@ -32,7 +32,7 @@ class RaceController {
             }
             println()
         } while (input != -1)
-        logger.info { "Shutting Down Horse Racess App" }
+        logger.info { "Shutting Down Horse Races App" }
     }
 
     fun menu() :Int { return raceView.menu() }
@@ -81,8 +81,8 @@ class RaceController {
     }
 
     fun dummyData() {
-        races.create(RaceModel(raceName = "New York New York", venue = "So Good They Named It Twice"))
-        races.create(RaceModel(raceName = "Ring of Kerry", venue = "Some place in the Kingdom"))
-        races.create(RaceModel(raceName = "Waterford City", venue = "You get great Blaas Here!!"))
+        races.create(RaceModel(raceName = "New York 200", venue = "New York Race Course", raceDate = "23/1/2022", startTime = "", raceSize = 10, raceWinner = "Pink Panther"))
+        races.create(RaceModel(raceName = "May park Dash", venue = "Maypark", raceDate = "", startTime = "12/6/2022", raceSize = 12, raceWinner = "Gold Dust"))
+        races.create(RaceModel(raceName = "Goldman 500", venue = "Tramore Racecourse", raceDate = "", startTime = "26/9/2022", raceSize = 15, raceWinner = "Chocolate Flash"))
     }
 }

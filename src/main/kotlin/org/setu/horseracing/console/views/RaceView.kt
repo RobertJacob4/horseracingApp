@@ -1,7 +1,7 @@
 package org.setu.horseracing.console.views
 
-import org.setu.horseracing.console.models.RaceMemStore
-import org.setu.horseracing.console.models.RaceModel
+import org.setu.horseracing.console.models.race.RaceMemStore
+import org.setu.horseracing.console.models.race.RaceModel
 
 class RaceView {
 
@@ -73,16 +73,32 @@ class RaceView {
 
         val tempRaceName: String?
         val tempRaceVenue: String?
+        val tempRaceSize: Int
+        val tempRaceDate: String?
+        val tempStartTime: String?
+        val tempRaceWinner: String?
 
         if (race != null) {
-            print("Enter a new Title for [ " + race.raceName + " ] : ")
+            print("Enter a new Race name for [ " + race.raceName + " ] : ")
             tempRaceName = readLine()!!
-            print("Enter a new Description for [ " + race.venue + " ] : ")
+            print("Enter a new venue for [ " + race.venue + " ] : ")
             tempRaceVenue = readLine()!!
+            print("Enter a new race size for [ " + race.raceSize + " ] : ")
+            tempRaceSize = readLine()!!.toInt()
+            print("Enter a new race Date for [ " + race.raceDate + " ] : ")
+            tempRaceDate = readLine()!!
+            print("Enter a new start time for [ " + race.startTime + " ] : ")
+            tempStartTime = readLine()!!
+            print("Enter a new race Winner for [ " + race.raceWinner + " ] : ")
+            tempRaceWinner = readLine()!!
 
-            if (!tempRaceName.isNullOrEmpty() && !tempRaceVenue.isNullOrEmpty()) {
+            if (tempRaceName.isNotEmpty() && tempRaceVenue.isNotEmpty() && tempRaceSize > 0 && tempRaceDate.isNotEmpty() && tempStartTime.isNotEmpty() && tempRaceWinner.isNotEmpty()) {
                 race.raceName = tempRaceName
                 race.venue = tempRaceVenue
+                race.raceSize = tempRaceSize
+                race.raceDate = tempRaceDate
+                race.startTime = tempStartTime
+                race.raceWinner = tempRaceWinner
                 return true
             }
         }

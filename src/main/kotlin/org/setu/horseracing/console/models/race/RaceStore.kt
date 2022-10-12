@@ -1,4 +1,6 @@
-package org.setu.horseracing.console.models
+package org.setu.horseracing.console.models.race
+
+import org.setu.horseracing.console.models.race.RaceModel
 
 interface RaceStore {
     fun findAll(): List<RaceModel>
