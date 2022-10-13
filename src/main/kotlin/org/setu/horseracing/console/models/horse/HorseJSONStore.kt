@@ -54,6 +54,12 @@ class HorseJSONStore : HorseStore {
         serialize()
     }
 
+
+    override fun delete(horse: HorseModel) {
+        horses.remove(horse)
+        serialize()
+    }
+
     internal fun logAll() {
         horses.forEach { logger.info("${it}") }
     }

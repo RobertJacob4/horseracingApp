@@ -47,10 +47,10 @@ class RaceController {
 
         if(aRace != null) {
             races.delete(aRace)
-            println("Vessel Deleted")
+            println("Horse Deleted")
         }
         else
-            println("Vessel Not Deleted")
+            println("Horse Not Deleted")
     }
 
     fun add(){

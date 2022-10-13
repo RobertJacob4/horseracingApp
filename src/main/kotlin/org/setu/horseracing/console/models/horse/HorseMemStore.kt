@@ -28,6 +28,9 @@ class HorseMemStore : HorseStore {
         logAll()
     }
 
+    override fun delete(horse: HorseModel) {
+        horses.remove(horse)
+    }
     override fun update(horse: HorseModel) {
         var foundHorse = findOne(horse.id!!)
         if (foundHorse != null) {

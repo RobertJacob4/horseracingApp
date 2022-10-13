@@ -6,4 +6,5 @@ interface HorseStore {
     fun findOne(id: Long): HorseModel?
     fun create(horse: HorseModel)
     fun update(horse: HorseModel)
+    fun delete(horse: HorseModel)
 }

@@ -17,6 +17,7 @@ class HorseView {
         println(" 2. Update a Horse")
         println(" 3. List All Horses")
         println(" 4. Search Horses")
+        println(" 5. Delete Horse")
         println("-1. Exit")
         println()
         print("Enter Option : ")

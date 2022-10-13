@@ -29,6 +29,7 @@ class HorseController {
                 2 -> update()
                 3 -> list()
                 4 -> search()
+                5 -> delete()
                 -99 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
@@ -51,6 +52,19 @@ class HorseController {
 
     fun list() {
         horseView.listHorses(horses)
+    }
+
+    fun delete() {
+        horseView.listHorses(horses)
+        var searchId = horseView.getId()
+        val aHorse = search(searchId)
+
+        if(aHorse != null) {
+            horses.delete(aHorse)
+            println("Horse Deleted")
+        }
+        else
+            println("Horse Not Deleted")
     }
 
     fun update() {
