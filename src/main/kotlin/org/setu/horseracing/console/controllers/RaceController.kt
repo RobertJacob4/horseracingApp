@@ -28,6 +28,7 @@ class RaceController {
                 2 -> update()
                 3 -> list()
                 4 -> search()
+                5 -> delete()
                 -99 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
@@ -39,6 +40,19 @@ class RaceController {
 
     fun menu() :Int { return raceView.menu() }
 
+    fun delete() {
+        raceView.listRaces(races)
+        var searchId = raceView.getId()
+        val aRace = search(searchId)
+
+        if(aRace != null) {
+            races.delete(aRace)
+            println("Vessel Deleted")
+        }
+        else
+            println("Vessel Not Deleted")
+    }
+
     fun add(){
         val aRace = RaceModel()
 
@@ -47,6 +61,7 @@ class RaceController {
         else
             logger.info("Race Not Added")
     }
+
 
     fun list() {
         raceView.listRaces(races)

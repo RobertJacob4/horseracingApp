@@ -16,6 +16,7 @@ class RaceView {
         println(" 2. Update Race")
         println(" 3. List All Races")
         println(" 4. Search Races")
+        println(" 5. Delete Race")
         println("-1. Exit")
         println()
         print("Enter Option : ")

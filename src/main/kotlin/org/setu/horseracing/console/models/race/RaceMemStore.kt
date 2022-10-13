@@ -40,6 +40,10 @@ class RaceMemStore : RaceStore {
         }
     }
 
+    override fun delete(race: RaceModel) {
+        races.remove(race)
+    }
+
     internal fun logAll() {
         races.forEach { logger.info("${it}") }
     }

@@ -7,4 +7,5 @@ interface RaceStore {
     fun findOne(id: Long): RaceModel?
     fun create(race: RaceModel)
     fun update(race: RaceModel)
+    fun delete(race: RaceModel)
 }
