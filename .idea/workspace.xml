@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3693142-440c-4eb4-8d51-7a034bc39ad9" name="Changes" comment="added delete function for races&#10;fixed bug">
+    <list default="true" id="a3693142-440c-4eb4-8d51-7a034bc39ad9" name="Changes" comment="Added color to print statements in console&#10;Formatted Menu&#10;Added main menu to choose between views">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/HorseController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/controllers/HorseController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/main/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/main/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/HorseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/setu/horseracing/console/views/HorseView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665669054039</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added color to print statements in console&#10;Formatted Menu&#10;Added main menu to choose between views">
+      <created>1666109963948</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1666109963948</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +224,7 @@
     <MESSAGE value="added persistence with JSON&#10;fixed bugs with views" />
     <MESSAGE value="added delete function for races" />
     <MESSAGE value="added delete function for races&#10;fixed bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="added delete function for races&#10;fixed bug" />
+    <MESSAGE value="Added color to print statements in console&#10;Formatted Menu&#10;Added main menu to choose between views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added color to print statements in console&#10;Formatted Menu&#10;Added main menu to choose between views" />
   </component>
 </project>
