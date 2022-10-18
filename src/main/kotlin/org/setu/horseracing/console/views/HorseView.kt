@@ -1,8 +1,13 @@
 package org.setu.horseracing.console.views
 
 import org.setu.horseracing.console.models.horse.HorseJSONStore
-import org.setu.horseracing.console.models.horse.HorseMemStore
 import org.setu.horseracing.console.models.horse.HorseModel
+
+val ANSI_RESET = "\u001B[0m"
+val ANSI_GREEN = "\u001B[32m"
+val ANSI_RED = "\u001B[31m"
+val ANSI_BLUE = "\u001B[34m"
+val CYAN = "\u001b[0;36m" // CYAN
 
 
 class HorseView {
@@ -12,15 +17,15 @@ class HorseView {
         var option : Int
         var input: String?
 
-        println("MAIN MENU")
-        println(" 1. Add a Horse")
+        println(ANSI_BLUE + "HORSE MENU" + ANSI_RESET)
+        println(CYAN + " 1. Add a Horse")
         println(" 2. Update a Horse")
         println(" 3. List All Horses")
         println(" 4. Search Horses")
-        println(" 5. Delete Horse")
-        println("-1. Exit")
+        println(" 5. Delete Horse" + ANSI_RESET)
+        println(ANSI_RED + "-1. Exit" + ANSI_RESET)
         println()
-        print("Enter Option : ")
+        print(ANSI_BLUE + "Enter Option : " + ANSI_RESET)
         input = readLine()!!
         option = if (input.toIntOrNull() != null && !input.isEmpty())
             input.toInt()
@@ -30,7 +35,7 @@ class HorseView {
     }
 
     fun listHorses(horses: HorseJSONStore) {
-        println("List All Horses")
+        println(CYAN + "List All Horses" + ANSI_RESET)
         println()
         horses.logAll()
         println()
@@ -38,21 +43,21 @@ class HorseView {
 
     fun showHorse(horse : HorseModel) {
         if(horse != null)
-            println("Horse Details [ $horse ]")
+            println(ANSI_GREEN + "Horse Details [ $horse ]" + ANSI_RESET)
         else
-            println("Horse Not Found...")
+            println(ANSI_RED + "Horse Not Found..." + ANSI_RESET)
     }
 
     fun addHorseData(horse : HorseModel) : Boolean {
 
         println()
-        print("Enter a Horse Name : ")
+        print(ANSI_BLUE + "Enter a Horse Name : ")
         horse.horseName = readLine()!!
         print("Enter their Age : ")
         horse.horseAge = readln().toInt()
         print("Enter the jockeys name : ")
         horse.jockey = readln()
-        print("Enter the trainers Name: ")
+        print("Enter the trainers Name: " + ANSI_RESET)
         horse.trainer = readln()
 
         return horse.horseName.isNotEmpty() &&
@@ -69,13 +74,13 @@ class HorseView {
         val tempTrainer: String?
 
         if (horse != null) {
-            print("Enter a new Name for [ " + horse.horseName + " ] : ")
+            print(ANSI_BLUE + "Enter a new Name for [ " + horse.horseName + " ] : ")
             tempHorseName = readLine()!!
             print("Enter a new Age for [ " + horse.horseAge + " ] : ")
             tempHorseAge = readln().toInt()
             print("Enter a new jockey for [ " + horse.jockey + " ] : ")
             tempJockey = readln()!!
-            print("Enter a new trainer for [ " + horse.trainer + " ] : ")
+            print("Enter a new trainer for [ " + horse.trainer + " ] : " + ANSI_RESET)
             tempTrainer = readln()!!
 
 
@@ -93,7 +98,7 @@ class HorseView {
     fun getId() : Long {
         var strId : String?
         var searchId : Long
-        print("Enter id to Search/Update : ")
+        print(ANSI_BLUE+ "Enter id to Search/Update : "+ ANSI_RESET)
         strId = readLine()!!
         searchId = if (strId.toLongOrNull() != null && !strId.isEmpty())
             strId.toLong()

@@ -2,7 +2,6 @@ package org.setu.horseracing.console.controllers
 
 import mu.KotlinLogging
 import org.setu.horseracing.console.models.horse.HorseJSONStore
-import org.setu.horseracing.console.models.horse.HorseMemStore
 import org.setu.horseracing.console.models.horse.HorseModel
 import org.setu.horseracing.console.views.HorseView
 
@@ -14,9 +13,14 @@ class HorseController {
     val horseView = HorseView()
     val logger = KotlinLogging.logger {}
 
+    val ANSI_RESET = "\u001B[0m"
+    val ANSI_GREEN = "\u001B[32m"
+    val ANSI_RED = "\u001B[31m"
+    val ANSI_BLUE = "\u001B[34m"
+
     init {
         logger.info { "Launching Horse Race App" }
-        println("Horse Race App Version 1.0")
+        println(ANSI_GREEN + "Horse Race App Version 1.0" + ANSI_RESET)
     }
 
     fun start() {
@@ -31,8 +35,8 @@ class HorseController {
                 4 -> search()
                 5 -> delete()
                 -99 -> dummyData()
-                -1 -> println("Exiting App")
-                else -> println("Invalid Option")
+                -1 -> println(ANSI_RED + "Exiting App")
+                else -> println(ANSI_RED + "Invalid Option" + ANSI_RESET)
             }
             println()
         } while (input != -1)
@@ -47,7 +51,7 @@ class HorseController {
         if (horseView.addHorseData(tempHorse))
             horses.create(tempHorse)
         else
-            logger.info("Horse Not Added")
+            logger.info(ANSI_RED + "Horse Not Added" + ANSI_RESET)
     }
 
     fun list() {
@@ -61,10 +65,10 @@ class HorseController {
 
         if(aHorse != null) {
             horses.delete(aHorse)
-            println("Horse Deleted")
+            println(ANSI_GREEN + "Horse Deleted" + ANSI_RESET)
         }
         else
-            println("Horse Not Deleted")
+            println(ANSI_RED + "Horse Not Deleted" + ANSI_RESET)
     }
 
     fun update() {
@@ -77,13 +81,13 @@ class HorseController {
             if(horseView.updateHorseData(aHorse)) {
                 horses.update(aHorse)
                 horseView.showHorse(aHorse)
-                logger.info("Horse Updated : [ $aHorse ]")
+                logger.info(ANSI_GREEN + "Horse Updated : [ $aHorse ]" + ANSI_RESET)
             }
             else
                 logger.info("Horse Not Updated")
         }
         else
-            println("Horse Not Updated...")
+            println(ANSI_RED + "Horse Not Updated..." + ANSI_RESET)
     }
 
     fun search() {
