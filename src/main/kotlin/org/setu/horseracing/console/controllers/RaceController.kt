@@ -14,8 +14,8 @@ class RaceController {
     val logger = KotlinLogging.logger {}
 
     init {
-        logger.info { "Launching Placemark Console App" }
-        println("Placemark Kotlin App Version 1.0")
+        logger.info { "Launching Horse Racing App" }
+        println("Horse Racing Kotlin App Version 1.0")
     }
 
     fun start() {
@@ -47,10 +47,10 @@ class RaceController {
 
         if(aRace != null) {
             races.delete(aRace)
-            println("Horse Deleted")
+            println("Race Deleted")
         }
         else
-            println("Horse Not Deleted")
+            println("Race Not Deleted")
     }
 
     fun add(){
